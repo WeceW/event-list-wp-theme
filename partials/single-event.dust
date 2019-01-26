@@ -1,0 +1,26 @@
+{>"shared/header" /}
+
+{! Open the Single context !}
+{#SingleEvent}
+
+    <div class="main-content">
+        {! Open the Content context !}
+        {#Query}
+        <div class="main-content__hero">
+            <h1 class="hero__heading">{post_title}</h1>
+            ({post_excerpt})
+            {@content data=fields.date_from /}
+            {@content data=fields.date_until /}
+            <hr>
+            <div class="hero__content">
+                {@content /}
+            </div>
+        </div>
+        {/Query}
+        {! End the Content context !}
+    </div>
+
+{/SingleEvent}
+{! End the Single context !}
+
+{>"shared/footer" /}

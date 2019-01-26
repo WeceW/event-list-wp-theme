@@ -59,12 +59,13 @@ body {
 }
 
 footer {
-  /*background: #090913;*/
+  background: #fcfcfc;
   border-top: 1px solid #090913;
   color: #090913;
   margin-top: 50px;
   padding: 10px;  
   text-align: center;
+  height: 100px;
 }
 
 
