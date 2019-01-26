@@ -3,40 +3,45 @@
 {! Open the Index context !}
 {#PageEvents}
 
+    <div class="gt-event-list-content">
 
-
-    <div class="main-content" id="main-content">
-        <div class="post-list-container" id="post-list-container">
-            {! Use a partial to enable ajaxing !}
+        <!-- Tabs -->
+        <div class="gt-event-list-tabs-container">
             {#Query}
-                {#posts}
-                    <div class="post-list-item">
-                        {@content data=fields.date_from /}
-                        {@content data=fields.date_until /}
-                        <a href="{permalink}">{post_title}</a></li>
-                        ({post_excerpt})
-                    </div>
-                {/posts}
+                <div id='{tab_name}' class="gt-event-list-tabs {@contains key=tab_name value="all_events"} active {/contains}">{tab_title}</div>
             {/Query}
         </div>
-        {@gt key=Query.max_num_pages value=1}
-            <a href="#" id="load-more" data-max-num-pages="{Query.max_num_pages}">Load more</a>
-        {/gt}
-    </div>
 
-<!--     <div class="main-content">
-        {! Open the Content context !}
+        <!-- Event list(s) -->
         {#Query}
-        <div class="main-content__hero">
-            <h1 class="hero__heading">{post_title}</h1>
-            <div class="hero__content">
-                {post_content}
-            </div>
+            
+        <div class="gt-event-list-container" id="gt-event-list-container-{tab_name}" 
+            {@contains key=tab_name value="all_events"} style="display:block;" {:else} style="display:none;" {/contains} >
+            <!-- <div class="gt-event-list-container-title">{tab_title}:</div> -->
+            {#tab_query}
+                {#posts}
+                    <div class="gt-event-list-item">
+                        <div class="gt-event-list-item-date-container">
+                            <!-- For some reason 'fields.date_from' (or 'fields[date_from]') not working with @strtodate -->
+                            <!-- <span class="gt-event-list-item-date">From {@strtodate value=fields.date_from format="d M Y" /}</span> -->
+                            <!-- <span class="gt-event-list-item-date">  to {@strtodate value=fields.date_until format="d M Y" /}</span> -->
+                            <span class="gt-event-list-item-date">{@content data=fields.date_from /}</span> - 
+                            <span class="gt-event-list-item-date">{@content data=fields.date_until /}</span>
+                        </div>
+                        <a href="{permalink}" class="gt-event-list-item-title">{post_title}</a>
+                        <div class="gt-event-list-item-excerpt">{post_excerpt}</div>
+                    </div>
+                {/posts}
+            {/tab_query}
         </div>
         {/Query}
-        {! End the Content context !}
-    </div> -->
 
+
+        {@gt key=QueryAll.max_num_pages value=1}
+            <a href="#" id="load-more" data-max-num-pages="{QueryAll.max_num_pages}">Load more</a>
+        {/gt}
+
+    </div>
 
 {/PageEvents}
 {! End the Index context !}

@@ -1,45 +1,26 @@
 <!doctype html>
 <html {WP.LanguageAttributes}>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="profile" href="https://gmpg.org/xfn/11" />
-  <title>{WP.name}</title>
-  {@wphead /}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="profile" href="https://gmpg.org/xfn/11" />
+    <title>{WP.name}</title>
+    {@wphead /}
 </head>
 
 <body class="{#WP.body_class}{.}{@sep} {/sep}{/WP.body_class}">
 
 <div id="page" class="site">
 
-  <header class="gt-header">
-    <img src="{WP.template_url}/assets/img/road.png" class="gt-header-bgimg" />
-    <div class="gt-header-title">
-      <div class="gt-header-subtitle">Task for geniem:</div>
-      < EventList >
-      <div class="gt-header-subtitle">By: Toni Weckroth</div>
-    </div>
-  </header>
+    <header class="gt-header">
+        <img src="{WP.template_url}/assets/img/road.png" class="gt-header-bgimg" />
+        <div class="gt-header-title">
+            <div class="gt-header-subtitle">Task for geniem:</div>
+            < EventList >
+            <div class="gt-header-subtitle">By: Toni Weckroth</div>
+        </div>
+    </header>
 
-  <nav class="gt-header-nav">
-    <div class="gt-header-nav-link">Upcoming Events</div>
-    <div class="gt-header-nav-link">All Events</div>
-  </nav>
+    {@menu menu_name="main-menu" ul_id="gt-menu" ul_classes="gt-menu" /}
 
-  <div id="content" class="site-content">
-
-
-<!-- <body class="{#WP.body_class}{.}{@sep} {/sep}{/WP.body_class}">
-
-<div class="top-bar">
-    <div class="top-bar-left">
-        <ul class="menu">
-            <li class="menu-text"><a href="{WP.url}">{WP.name}</a></li>
-        </ul>
-    </div>
-    <div class="top-bar-right">
-        {@menu menu_name="primary_navigation" ul_id="primary-menu" ul_classes="menu primary-menu" show_submenu=false /}
-    </div>
-</div>
-
-<div class="main-container"> -->
+    <div id="content" class="site-content">

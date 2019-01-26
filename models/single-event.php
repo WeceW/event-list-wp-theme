@@ -11,6 +11,6 @@ class SingleEvent extends \DustPress\Model {
      * @return array|null|WP_Post
      */
     public function Query() {
-      return \DustPress\Query::get_acf_post( get_the_ID() );
+        return \DustPress\Query::get_acf_post( get_the_ID() );
     }
 }

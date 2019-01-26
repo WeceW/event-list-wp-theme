@@ -1,7 +1,7 @@
     </div>{! .content !}
     
     <footer>
-      GeniemTask | Toni Weckroth | toni.weckroth@tuni.fi
+        GeniemTask: < EventList > | Toni Weckroth | toni.weckroth@tuni.fi
     </footer>
     
     {@wpfooter /}

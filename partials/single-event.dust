@@ -3,18 +3,22 @@
 {! Open the Single context !}
 {#SingleEvent}
 
-    <div class="main-content">
+    <div class="gt-single-event-content">
         {! Open the Content context !}
         {#Query}
-        <div class="main-content__hero">
-            <h1 class="hero__heading">{post_title}</h1>
-            ({post_excerpt})
-            {@content data=fields.date_from /}
-            {@content data=fields.date_until /}
+        <div class="gt-single-event">   
+
+            <!-- For some reason 'fields.date_from' (or 'fields[date_from]') not working with @strtodate -->
+            <!-- <span class="gt-single-event-dates">From {@strtodate value=fields.date_from format="d M Y" /}</span> -->
+            <!-- <span class="gt-single-event-dates"> to {@strtodate value=fields.date_until format="d M Y" /}</span> -->
+            <span class="gt-single-event-dates">From {@content data=fields.date_from /} </span>
+            <span class="gt-single-event-dates"> to {@content data=fields.date_until /}</span>
+            
+            <h1 class="gt-single-event-title">{post_title}</h1>
+            <span class="gt-single-event-excerpt">{post_excerpt}</span>
             <hr>
-            <div class="hero__content">
-                {@content /}
-            </div>
+            <span class="gt-single-event-body">{@content /}</span>
+
         </div>
         {/Query}
         {! End the Content context !}
