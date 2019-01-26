@@ -3,7 +3,7 @@
 /**
  * This is the model for singular posts.
  */
-class Single extends MiddleModel {
+class Single extends \DustPress\Model {
 
     /**
      * This returns the current post

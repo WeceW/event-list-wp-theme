@@ -1,16 +1,17 @@
 <?php
 /**
- * GeniemTask functions and definitions
+ * Functions and definitions
  *
  * @link 
  *
- * @package GeniemTask
- * @subpackage GeniemTask
+ * @package EventList
  * @since 1.0.0
  */
 
+
 require get_template_directory() . "/vendor/devgeniem/dustpress/dustpress.php";
 dustpress();
+
 
 if ( ! defined( 'ASSETS_DIR' ) ) {
     define( 'ASSETS_DIR', get_template_directory_uri() . '/assets' );
@@ -71,8 +72,6 @@ function custom_post_type() {
     register_post_type( 'event', $args );
 }
 add_action( 'init', 'custom_post_type', 0 );
-
-
 
 
 /**

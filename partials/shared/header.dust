@@ -15,9 +15,8 @@
     <header class="gt-header">
         <img src="{WP.template_url}/assets/img/road.png" class="gt-header-bgimg" />
         <div class="gt-header-title">
-            <div class="gt-header-subtitle">Task for geniem:</div>
             < EventList >
-            <div class="gt-header-subtitle">By: Toni Weckroth</div>
+            <!-- <div class="gt-header-subtitle">By: Toni Weckroth</div> -->
         </div>
     </header>
 

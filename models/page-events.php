@@ -8,7 +8,7 @@
 /**
  * Class Archive
  */
-class PageEvents extends MiddleModel {
+class PageEvents extends \DustPress\Model {
 
     /**
      * Enable DustPress.js usage

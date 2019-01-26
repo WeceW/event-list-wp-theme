@@ -1,7 +1,11 @@
     </div>{! .content !}
     
     <footer>
-        GeniemTask: < EventList > | Toni Weckroth | toni.weckroth@tuni.fi
+        EventList 
+        &nbsp; &#8226; &nbsp; 
+        Toni Weckroth &#169 {@strtodate format="Y" /} 
+        &nbsp; &#8226; &nbsp; 
+        toni.weckroth@tuni.fi
     </footer>
     
     {@wpfooter /}

@@ -3,7 +3,7 @@
 {! Open the Index context !}
 {#PageEvents}
 
-    <div class="gt-event-list-content">
+    <div class="gt-main-content">
 
         <!-- Tabs -->
         <div class="gt-event-list-tabs-container">

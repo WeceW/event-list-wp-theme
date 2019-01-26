@@ -3,7 +3,7 @@
 {! Open the Single context !}
 {#SingleEvent}
 
-    <div class="gt-single-event-content">
+    <div class="gt-main-content">
         {! Open the Content context !}
         {#Query}
         <div class="gt-single-event">   
