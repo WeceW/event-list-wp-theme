@@ -1,5 +1,11 @@
 <?php
 
 class Header extends \DustPress\Model {
-  // TODO: Pass "Title" & url for the banner/image from here?
+
+    public function HeaderData() {
+        $data = [
+            'imgurl' => '/assets/img/road.png',
+        ];
+        return [$data];
+    }
 }

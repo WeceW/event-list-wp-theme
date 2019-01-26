@@ -10,6 +10,11 @@
  */
 class PageEvents extends \DustPress\Model {
 
+    public function init() {
+        $this->bind_sub("Header");
+        $this->bind_sub("Footer");
+    }
+
     /**
      * Enable DustPress.js usage
      *

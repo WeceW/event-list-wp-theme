@@ -13,9 +13,13 @@
 <div id="page" class="site">
 
     <header class="gt-header">
-        <img src="{WP.template_url}/assets/img/road.png" class="gt-header-bgimg" />
+        {#Header}
+            {#HeaderData}
+                <img src="{WP.template_url}{imgurl}" class="gt-header-bgimg" />
+            {/HeaderData}
+        {/Header}
         <div class="gt-header-title">
-            < EventList >
+            < {WP.name} >
             <!-- <div class="gt-header-subtitle">By: Toni Weckroth</div> -->
         </div>
     </header>

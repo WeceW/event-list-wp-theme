@@ -25,8 +25,8 @@
                             <!-- For some reason 'fields.date_from' (or 'fields[date_from]') not working with @strtodate -->
                             <!-- <span class="gt-event-list-item-date">From {@strtodate value=fields.date_from format="d M Y" /}</span> -->
                             <!-- <span class="gt-event-list-item-date">  to {@strtodate value=fields.date_until format="d M Y" /}</span> -->
-                            <span class="gt-event-list-item-date">{@content data=fields.date_from /}</span> - 
-                            <span class="gt-event-list-item-date">{@content data=fields.date_until /}</span>
+                            <span class="gt-event-list-item-date">From {@content data=fields.date_from /}</span> 
+                            <span class="gt-event-list-item-date">to {@content data=fields.date_until /}</span>
                         </div>
                         <a href="{permalink}" class="gt-event-list-item-title">{post_title}</a>
                         <div class="gt-event-list-item-excerpt">{post_excerpt}</div>

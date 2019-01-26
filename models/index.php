@@ -5,6 +5,11 @@
  */
 class Index extends \DustPress\Model {
 
+    public function init() {
+        $this->bind_sub("Header");
+        $this->bind_sub("Footer");
+    }
+
     /**
      * This returns the page set for frontpage.
      *
