@@ -1,0 +1,67 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "ecbcc6db6cf10959d8cb07222760b680",
+    "packages": [
+        {
+            "name": "devgeniem/dustpress",
+            "version": "1.20.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/devgeniem/dustpress.git",
+                "reference": "1861b1c9c3c1274864e8ed9e0d3efcc624e4f7fd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/devgeniem/dustpress/zipball/1861b1c9c3c1274864e8ed9e0d3efcc624e4f7fd",
+                "reference": "1861b1c9c3c1274864e8ed9e0d3efcc624e4f7fd",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "dustpress.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Miika Arponen",
+                    "email": "miika.arponen@geniem.com",
+                    "homepage": "http://geniem.com/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Ville Siltala",
+                    "email": "ville.siltala@geniem.com",
+                    "homepage": "http://geniem.com/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "WordPress Theme Framework.",
+            "keywords": [
+                "dustjs",
+                "dustpress",
+                "framework",
+                "javascript",
+                "theme",
+                "wordpress"
+            ],
+            "time": "2019-01-08T14:44:31+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
