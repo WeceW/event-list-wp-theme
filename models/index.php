@@ -3,12 +3,7 @@
 /**
  * This is the default model class for our theme.
  */
-class Index extends \DustPress\Model {
-
-    public function init() {
-        $this->bind_sub("Header");
-        $this->bind_sub("Footer");
-    }
+class Index extends MiddleModel {
 
     /**
      * This returns the page set for frontpage.

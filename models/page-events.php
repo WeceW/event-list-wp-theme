@@ -8,12 +8,7 @@
 /**
  * Class Archive
  */
-class PageEvents extends \DustPress\Model {
-
-    public function init() {
-        $this->bind_sub("Header");
-        $this->bind_sub("Footer");
-    }
+class PageEvents extends MiddleModel {
 
     /**
      * Enable DustPress.js usage
@@ -50,7 +45,7 @@ class PageEvents extends \DustPress\Model {
     }
 
     /**
-     * Query all events for the Events page.
+     * Query ALL EVENTS for the Events page.
      *
      * @return array|bool|WP_Query
      */
@@ -66,7 +61,7 @@ class PageEvents extends \DustPress\Model {
 
 
     /**
-     * Query upcoming events for the Events page.
+     * Query UPCOMING EVENTS for the Events page.
      *
      * @return array|bool|WP_Query
      */

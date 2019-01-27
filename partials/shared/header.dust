@@ -15,7 +15,7 @@
     <header class="gt-header">
         {#Header}
             {#HeaderData}
-                <img src="{WP.template_url}{imgurl}" class="gt-header-bgimg" />
+                <img src="{WP.template_url}{imgurl}" class="gt-header-bgimg" alt="header image" />
             {/HeaderData}
         {/Header}
         <div class="gt-header-title">

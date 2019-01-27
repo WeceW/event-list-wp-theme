@@ -3,12 +3,7 @@
 /**
  * This is the model for singular posts.
  */
-class SingleEvent extends \DustPress\Model {
-
-    public function init() {
-        $this->bind_sub("Header");
-        $this->bind_sub("Footer");
-    }
+class SingleEvent extends MiddleModel {
 
     /**
      * This returns the current post
