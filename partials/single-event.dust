@@ -8,11 +8,10 @@
         {#Query}
         <div class="gt-single-event">   
 
-            <!-- For some reason 'fields.date_from' (or 'fields[date_from]') not working with @strtodate -->
-            <!-- <span class="gt-single-event-dates">From {@strtodate value=fields.date_from format="d M Y" /}</span> -->
-            <!-- <span class="gt-single-event-dates"> to {@strtodate value=fields.date_until format="d M Y" /}</span> -->
-            <span class="gt-single-event-dates">From {@content data=fields.date_from /} </span>
-            <span class="gt-single-event-dates"> to {@content data=fields.date_until /}</span>
+            <div class="gt-single-event-date-container">
+                <span class="gt-single-event-dates">From {@strtodate value=fields.date_from format="d M" /}</span>
+                <span class="gt-single-event-dates"> to {@strtodate value=fields.date_until format="d M, Y" /}</span>
+            </div>
             
             <h1 class="gt-single-event-title">{post_title}</h1>
             <span class="gt-single-event-excerpt">{post_excerpt}</span>

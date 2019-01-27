@@ -16,17 +16,17 @@
         {#Query}
             
         <div class="gt-event-list-container" id="gt-event-list-container-{tab_name}" 
+            {! Show content only for "all events" tab !}
             {@contains key=tab_name value="all_events"} style="display:block;" {:else} style="display:none;" {/contains} >
+
             <!-- <div class="gt-event-list-container-title">{tab_title}:</div> -->
+            
             {#tab_query}
                 {#posts}
                     <div class="gt-event-list-item">
                         <div class="gt-event-list-item-date-container">
-                            <!-- For some reason 'fields.date_from' (or 'fields[date_from]') not working with @strtodate -->
-                            <!-- <span class="gt-event-list-item-date">From {@strtodate value=fields.date_from format="d M Y" /}</span> -->
-                            <!-- <span class="gt-event-list-item-date">  to {@strtodate value=fields.date_until format="d M Y" /}</span> -->
-                            <span class="gt-event-list-item-date">From {@content data=fields.date_from /}</span> 
-                            <span class="gt-event-list-item-date">to {@content data=fields.date_until /}</span>
+                            <span class="gt-event-list-item-date">From {@strtodate value=fields.date_from format="d M" /}</span>
+                            <span class="gt-event-list-item-date">  to {@strtodate value=fields.date_until format="d M, Y" /}</span>
                         </div>
                         <a href="{permalink}" class="gt-event-list-item-title">{post_title}</a>
                         <div class="gt-event-list-item-excerpt">{post_excerpt}</div>
@@ -35,11 +35,6 @@
             {/tab_query}
         </div>
         {/Query}
-
-
-        {@gt key=QueryAll.max_num_pages value=1}
-            <a href="#" id="load-more" data-max-num-pages="{QueryAll.max_num_pages}">Load more</a>
-        {/gt}
 
     </div>
 

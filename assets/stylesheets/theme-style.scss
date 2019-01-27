@@ -8,6 +8,14 @@ $dark-color: #222222;
 $whitest-color: #ffffff;
 $black-text: #090913;
 
+@mixin primary-gradient() {
+  background: $secondary-color; /* Old browsers */
+  background: -moz-linear-gradient(top, $secondary-color 0%, $primary-color 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, $secondary-color 0%,$primary-color 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, $secondary-color 0%,$primary-color 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$secondary-color', endColorstr='$primary-color',GradientType=0 ); /* IE6-9 */
+}
+
 @import 'partials/header';
 @import 'partials/footer';
 @import 'partials/main-menu';
@@ -31,3 +39,15 @@ body {
   max-width: 500px;
   margin: 10px auto 10px auto;
 }
+
+.gt-event-list-item-date-container,
+.gt-single-event-date-container {
+  background-color: $secondary-color;
+  border-radius: 5px;
+  color: $whitest-color;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0 8px 4px 8px;
+  @include primary-gradient();
+}
+

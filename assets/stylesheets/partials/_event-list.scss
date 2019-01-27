@@ -31,7 +31,8 @@
 
 .gt-event-list-item-title {
   color: black;
-  text-transform: uppercase;
+  display: block;
+  font-size: 150%;
   font-weight: bold;
   text-decoration: none;
 }
@@ -63,15 +64,11 @@
   float: left;
   vertical-align: top;
 }
-.gt-event-list-tabs:hover {
+.gt-event-list-tabs:not(.active):hover {
   cursor: pointer;
-
-  background: $secondary-color; /* Old browsers */
-  background: -moz-linear-gradient(top, $secondary-color 0%, $primary-color 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, $secondary-color 0%,$primary-color 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, $secondary-color 0%,$primary-color 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$secondary-color', endColorstr='$primary-color',GradientType=0 ); /* IE6-9 */
+  @include primary-gradient();
 }
 .gt-event-list-tabs.active {
   background-color: $primary-color !important;
+  cursor: default;
 }
