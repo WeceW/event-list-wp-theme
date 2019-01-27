@@ -1,0 +1,38 @@
+/**
+ * HEADER
+ */
+
+ @media screen and (max-width: 800px) {
+  .gt-header {
+    border: none;
+  }
+  .gt-header-title {
+    display: none;
+  }
+}
+
+.gt-header {
+  background: $darkest-color;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  border-bottom: 3px solid $darkest-color;
+}
+.gt-header-bgimg {
+  width: 100%;
+}
+.gt-header-title {
+  color: $black-text;
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 8px;
+  text-align: center;
+  width: 100%;
+}
+.gt-header-subtitle {
+  display: block;
+  font-size: 40%;
+  text-transform: uppercase;
+  line-height: 15px;
+}

@@ -1,0 +1,77 @@
+/**
+ * EVENT-LIST
+  */
+
+.gt-event-list-container {
+  background-color: #eee;
+  border: none;
+  padding: 10px;
+}
+.gt-event-list-container-title {
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.gt-event-list-item {
+  border-bottom: 2px dotted #ccc;
+  padding: 10px;
+}
+
+.gt-event-list-item-date,
+.gt-event-list-item-excerpt {
+  font-size: 80%;
+}
+
+.gt-event-list-item-date p {
+  display: inline;
+}
+
+.gt-event-list-item-title {
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.gt-event-list-item-title:hover {
+  color: $secondary-color;
+}
+
+
+/**
+ * Event list's tab bar
+ */
+
+.gt-event-list-tabs-container {
+  border-bottom: 4px solid $primary-color;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.gt-event-list-tabs {
+  border-radius: 10px 10px 0 0;
+  border: none;
+  color: $whitest-color;
+  display: inline-block;
+  background-color: $secondary-color;
+  margin: 0;
+  padding: 10px;
+  float: left;
+  vertical-align: top;
+}
+.gt-event-list-tabs:hover {
+  cursor: pointer;
+
+  background: $secondary-color; /* Old browsers */
+  background: -moz-linear-gradient(top, $secondary-color 0%, $primary-color 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, $secondary-color 0%,$primary-color 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, $secondary-color 0%,$primary-color 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$secondary-color', endColorstr='$primary-color',GradientType=0 ); /* IE6-9 */
+}
+.gt-event-list-tabs.active {
+  background-color: $primary-color !important;
+}

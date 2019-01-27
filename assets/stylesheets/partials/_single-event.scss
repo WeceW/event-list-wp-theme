@@ -1,0 +1,18 @@
+/**
+ * SINGLE EVENT PAGE
+ */
+
+.gt-single-event {
+  display: block;
+}
+.gt-single-event-title {
+  margin: 0;
+}
+.gt-single-event-excerpt {
+  display: block;
+}
+.gt-single-event-dates,
+.gt-single-event-dates p {
+  display: inline;
+  font-size: 80%;
+}
