@@ -6,7 +6,7 @@ window.EventList = (function(window, document, $) {
 
     app.cache = function () {
         app.$mainContainer   = $("#gt-main-content");
-        app.$eventsContainer = $("#gt-event-list-container");
+        app.$eventsContainer = $(".gt-event-list");
         app.$loadMore        = app.$mainContainer.find(".load-more");
         app.maxNumPages      = parseInt(app.$loadMore.data('max-num-pages'));
         app.$tabs            = $(".gt-event-list-tabs");
@@ -19,12 +19,15 @@ window.EventList = (function(window, document, $) {
     };
 
     app.loadMore = function (e) {
-        dp("PageEvents/Query", {
+        dp("PageEvents/QueryAll", {
             tidy: true,
             // url: window.location,
             url: "http://localhost/geniem/",
+            args: "ARGSSSSS",
+            partial: "event-list",
             success: function( data ) {
-                console.log(data)
+                app.$eventsContainer.append(data);
+                // console.log(data)
             },
             error: function( error ) {
                 console.log(error);

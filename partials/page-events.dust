@@ -8,33 +8,20 @@
         <!-- Tabs -->
         <div class="gt-event-list-tabs-container">
             {#Query}
-                <div id='{tab_name}' class="gt-event-list-tabs {@contains key=tab_name value="all_events"} active {/contains}">{tab_title}</div>
+                <div id='{params.tab_name}' class="gt-event-list-tabs {@contains key=params.tab_name value="all_events"} active {/contains}">{params.tab_title}</div>
             {/Query}
         </div>
 
-        <!-- Event list(s) -->
         {#Query}
+            <div class="gt-event-list-container" id="gt-event-list-container-{params.tab_name}" 
+                {! Show content only for "all events" tab !}
+                {@contains key=params.tab_name value="all_events"} style="display:block;" {:else} style="display:none;" {/contains} >
             
-        <div class="gt-event-list-container" id="gt-event-list-container-{tab_name}" 
-            {! Show content only for "all events" tab !}
-            {@contains key=tab_name value="all_events"} style="display:block;" {:else} style="display:none;" {/contains} >
-
-            <!-- <div class="gt-event-list-container-title">{tab_title}:</div> -->
-            
-            {#tab_query}
-                {#posts}
-                    <div class="gt-event-list-item">
-                        <div class="gt-event-list-item-date-container">
-                            <span class="gt-event-list-item-date">From {@strtodate value=fields.date_from format="d M" /}</span>
-                            <span class="gt-event-list-item-date">  to {@strtodate value=fields.date_until format="d M, Y" /}</span>
-                        </div>
-                        <a href="{permalink}" class="gt-event-list-item-title">{post_title}</a>
-                        <div class="gt-event-list-item-excerpt">{post_excerpt}</div>
-                    </div>
-                {/posts}
-            {/tab_query}
-            <!-- <a href="#" class="load-more" id="load-more" data-max-num-pages="1">Load more</a> -->
-        </div>
+                <div class="gt-event-list" id="gt-event-list">
+                    {>"shared/event-list" /}
+                </div>
+                <a href="#" class="load-more" id="load-more" data-max-num-pages="1">Load more</a>
+            </div>
         {/Query}
 
     </div>

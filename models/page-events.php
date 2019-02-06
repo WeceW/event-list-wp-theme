@@ -16,7 +16,8 @@ class PageEvents extends MiddleModel {
      * @var array
      */
     protected $api = [
-        'Query'
+        'Query',
+        'QueryAll'
     ];
 
     /**
@@ -28,16 +29,20 @@ class PageEvents extends MiddleModel {
         $this->get_args();
         $tab_title = 'tab_title';
         $tab_name  = 'tab_name';
-        $tab_query = 'tab_query';
+        $tab_query = 'data';
 
         $q1 = array(
-            $tab_name  => 'all_events',
-            $tab_title => 'All Events',
+            'params' => array(
+                $tab_name  => 'all_events',
+                $tab_title => 'All Events',
+            ),
             $tab_query => $this->QueryAll(),
         );
         $q2 = array(
-            $tab_name  => 'upcoming_events',
-            $tab_title => 'Upcoming Events',
+            'params' => array(
+                $tab_name  => 'upcoming_events',
+                $tab_title => 'Upcoming Events',
+            ),
             $tab_query => $this->QueryUpcoming(),
         );
 
@@ -49,7 +54,12 @@ class PageEvents extends MiddleModel {
      *
      * @return array|bool|WP_Query
      */
-    private function QueryAll() {
+    protected function QueryAll() {
+        // echo var_dump( dustpress()->is_dustpress_ajax() );
+        // if ( dustpress()->is_dustpress_ajax() ) {  // <--- This call is crashing the site for some reason..?
+        //     $args = $this->get_args();
+        //     return \DustPress\Query::get_acf_posts( $args );
+        // }
         $query_args = [
             'post_type'                 => 'event',
             'no_found_rows'             => false,
@@ -65,7 +75,7 @@ class PageEvents extends MiddleModel {
      *
      * @return array|bool|WP_Query
      */
-    private function QueryUpcoming() {
+    protected function QueryUpcoming() {
         $today = date("Ymd");
 
         $query_args = [

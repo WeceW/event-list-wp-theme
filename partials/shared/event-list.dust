@@ -1,0 +1,13 @@
+
+{! TODO: This is for the ajax call. Not supposed to be separately like this -> needs to fix! !}
+{#posts}
+    {>"shared/event-list-item" /}
+{/posts}
+
+<!-- <div class="gt-event-list-container-title">{tab_title}:</div> -->
+
+{#data}
+    {#posts}
+        {>"shared/event-list-item" /}
+    {/posts}
+{/data}

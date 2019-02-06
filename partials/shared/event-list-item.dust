@@ -1,0 +1,8 @@
+<div class="gt-event-list-item">
+    <div class="gt-event-list-item-date-container">
+        <span class="gt-event-list-item-date">From {@strtodate value=fields.date_from format="d M" /}</span>
+        <span class="gt-event-list-item-date">  to {@strtodate value=fields.date_until format="d M, Y" /}</span>
+    </div>
+    <a href="{permalink}" class="gt-event-list-item-title">{post_title}</a>
+    <div class="gt-event-list-item-excerpt">{post_excerpt}</div>
+</div>
