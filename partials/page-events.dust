@@ -3,7 +3,7 @@
 {! Open the Index context !}
 {#PageEvents}
 
-    <div class="gt-main-content">
+    <div class="gt-main-content" id="gt-main-content">
 
         <!-- Tabs -->
         <div class="gt-event-list-tabs-container">
@@ -33,6 +33,7 @@
                     </div>
                 {/posts}
             {/tab_query}
+            <!-- <a href="#" class="load-more" id="load-more" data-max-num-pages="1">Load more</a> -->
         </div>
         {/Query}
 

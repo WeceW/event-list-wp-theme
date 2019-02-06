@@ -1,29 +1,47 @@
+window.EventList = (function(window, document, $) {
 
-function dustjs() {
-  dp("PageEvents/Query", {
-    tidy: true,
-    url: window.location,
-    success: function( data ) {
-      alert('JOOOOO');
-      console.log(data)
-    },
-    error: function( error ) {
-      console.log(error);
-    },
-  });
-}
+    var app = {
+        currentPage: 1
+    };
 
-jQuery(document).ready(function() {
-    jQuery(".gt-event-list-tabs").click(function(event) {
-        openTab(event.target.id);
-    });
-});
+    app.cache = function () {
+        app.$mainContainer   = $("#gt-main-content");
+        app.$eventsContainer = $("#gt-event-list-container");
+        app.$loadMore        = app.$mainContainer.find(".load-more");
+        app.maxNumPages      = parseInt(app.$loadMore.data('max-num-pages'));
+        app.$tabs            = $(".gt-event-list-tabs");
+    };
 
-function openTab(evtId) {
-    jQuery(".gt-event-list-container").hide();
-    jQuery("#gt-event-list-container-"+evtId).show();
+    app.init = function() {
+        app.cache();
+        app.$loadMore.on("click", app.loadMore);
+        app.$tabs.on("click", app.openTab);
+    };
 
-    jQuery(".gt-event-list-tabs").removeClass('active');
-    jQuery("#"+evtId).addClass('active');
-}
+    app.loadMore = function (e) {
+        dp("PageEvents/Query", {
+            tidy: true,
+            // url: window.location,
+            url: "http://localhost/geniem/",
+            success: function( data ) {
+                console.log(data)
+            },
+            error: function( error ) {
+                console.log(error);
+            },
+        });
+        return false;
+    };
 
+    app.openTab = function (e) {
+        $(".gt-event-list-container").hide();
+        $("#gt-event-list-container-"+e.target.id).show();
+        $(".gt-event-list-tabs").removeClass('active');
+        $("#"+e.target.id).addClass('active');
+    };
+
+    app.init();
+
+    return app;
+
+}(window, document, jQuery));
