@@ -2,6 +2,7 @@
 
 {! Open the Index context !}
 {#Index}
+    <button onclick="dustjs()">HELLO</button>
     <div class="gt-main-content">
         {! Open the Page context !}
         {#Page}

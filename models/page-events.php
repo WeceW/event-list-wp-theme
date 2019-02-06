@@ -25,7 +25,7 @@ class PageEvents extends MiddleModel {
      * @return array|bool|WP_Query
      */
     public function Query() {
-
+        $this->get_args();
         $tab_title = 'tab_title';
         $tab_name  = 'tab_name';
         $tab_query = 'tab_query';
