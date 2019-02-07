@@ -25,7 +25,7 @@ window.EventList = (function(window, document, $) {
         dp("PageEvents/QueryAll", {
             args: ++app.allEventsCurrentPage,
             tidy: true,
-            url: "http://localhost/geniem/",
+            url: document.location.origin + "/" + document.URL.split('/')[3] + "/",
             partial: "event-list",
             success: function( data ) {
                 $('#'+e.target.id).prev('.gt-event-list').append(data);
@@ -44,7 +44,7 @@ window.EventList = (function(window, document, $) {
         dp("PageEvents/QueryUpcoming", {
             args: ++app.upcomingEventsCurrentPage,
             tidy: true,
-            url: "http://localhost/geniem/",
+            url: document.location.origin + "/" + document.URL.split('/')[3] + "/",
             partial: "event-list",
             success: function( data ) {
                 $('#'+e.target.id).prev('.gt-event-list').append(data);

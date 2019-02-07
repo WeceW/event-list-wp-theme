@@ -20,7 +20,6 @@
         {/Header}
         <div class="gt-header-title">
             < {WP.name} >
-            <!-- <div class="gt-header-subtitle">By: Toni Weckroth</div> -->
         </div>
     </header>
 
