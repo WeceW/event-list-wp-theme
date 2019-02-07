@@ -7,6 +7,12 @@ $darkest-color: #000000;
 $dark-color: #222222;
 $whitest-color: #ffffff;
 $black-text: #090913;
+$grey-1: #eee;
+$grey-2: #ccc;
+$grey-2-5: #bbb;
+$grey-3: #aaa;
+$grey-4: #888;
+$grey-5: #666;
 
 @mixin primary-gradient() {
   background: $secondary-color; /* Old browsers */

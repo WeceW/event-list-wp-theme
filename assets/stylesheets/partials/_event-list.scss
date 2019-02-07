@@ -3,7 +3,7 @@
   */
 
 .gt-event-list-container {
-  background-color: #eee;
+  background-color: $grey-1;
   border: none;
   padding: 10px;
 }
@@ -16,7 +16,7 @@
 }
 
 .gt-event-list-item {
-  border-bottom: 2px dotted #ccc;
+  border-bottom: 2px dotted $grey-2;
   padding: 10px;
 }
 
@@ -41,6 +41,22 @@
   color: $secondary-color;
 }
 
+.load-more {
+  background-color: $grey-2;
+  border: 1px solid $grey-3;
+  border-radius: 3px;
+  color: $grey-4;
+  display: block;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+.load-more:hover {
+  background-color: $grey-2-5;
+  color: $whitest-color;
+  text-decoration: underline;
+}
 
 /**
  * Event list's tab bar
