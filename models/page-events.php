@@ -60,7 +60,7 @@ class PageEvents extends MiddleModel {
         $args = $this->get_args();
         $page = isset($args) ? $args : $page;
 
-        $per_page = 0 === $per_page ? (int)get_option('posts_per_page') : $per_page;
+        $per_page = 5;
         $offset = ($page > 0 ? (($page-1)*$per_page) : 0);
 
         $query_args = [
@@ -88,7 +88,7 @@ class PageEvents extends MiddleModel {
         $args = $this->get_args();
         $page = isset($args) ? $args : $page;
 
-        $per_page = 0 === $per_page ? (int)get_option('posts_per_page') : $per_page;
+        $per_page = 5;
         $offset = ($page > 0 ? (($page-1)*$per_page) : 0);
 
         $query_args = [

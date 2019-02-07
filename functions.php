@@ -48,7 +48,7 @@ function custom_post_type() {
         'not_found_in_trash'  => __( 'Not found in Trash', 'geniemtask' ),
     );
      
-// Set other options for Custom Post Type
+    // Set other options for Custom Post Type
     $args = array(
         'label'               => __( 'event', 'geniemtask' ),
         'description'         => __( 'Events', 'geniemtask' ),

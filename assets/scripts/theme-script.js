@@ -6,11 +6,12 @@ window.EventList = (function(window, document, $) {
     };
 
     app.cache = function () {
-        app.$mainContainer          = $("#gt-main-content");
-        app.$loadMoreAllEvents      = app.$mainContainer.find("#load-more-all-events");
-        app.$loadMoreUpcomingEvents = app.$mainContainer.find("#load-more-upcoming-events");
-        // app.maxNumPages             = parseInt(app.$loadMoreAllEvents.data('max-num-pages'));
-        app.$tabs                   = $(".gt-event-list-tabs");
+        app.$mainContainer              = $("#gt-main-content");
+        app.$loadMoreAllEvents          = app.$mainContainer.find("#load-more-all-events");
+        app.$loadMoreUpcomingEvents     = app.$mainContainer.find("#load-more-upcoming-events");
+        app.allEventsMaxNumPages        = parseInt(app.$loadMoreAllEvents.data('max-num-pages'));
+        app.upcomingEventsMaxNumPages   = parseInt(app.$loadMoreUpcomingEvents.data('max-num-pages'));
+        app.$tabs                       = $(".gt-event-list-tabs");
     };
 
     app.init = function() {
@@ -28,6 +29,9 @@ window.EventList = (function(window, document, $) {
             partial: "event-list",
             success: function( data ) {
                 $('#'+e.target.id).prev('.gt-event-list').append(data);
+                if ( app.allEventsCurrentPage === app.allEventsMaxNumPages ) {
+                    app.$loadMoreAllEvents.hide();
+                }
             },
             error: function( error ) {
                 console.log(error);
@@ -44,6 +48,9 @@ window.EventList = (function(window, document, $) {
             partial: "event-list",
             success: function( data ) {
                 $('#'+e.target.id).prev('.gt-event-list').append(data);
+                if ( app.upcomingEventsCurrentPage === app.upcomingEventsMaxNumPages ) {
+                    app.$loadMoreUpcomingEvents.hide();
+                }
             },
             error: function( error ) {
                 console.log(error);

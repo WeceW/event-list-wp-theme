@@ -20,7 +20,10 @@
                 <div class="gt-event-list" id="gt-event-list">
                     {>"shared/event-list" /}
                 </div>
-                <a href="#" class="load-more" id="load-more-{params.tab_name}" data-max-num-pages="1">Load more</a>
+                    <!-- <a href="#" class="load-more" id="load-more-{params.tab_name}" data-max-num-pages="1">Load more</a> -->
+                {#data}
+                    <a href="#" class="load-more" id="load-more-{params.tab_name}" data-max-num-pages="{max_num_pages}">Load more</a>
+                {/data}
             </div>
         {/Query}
 
