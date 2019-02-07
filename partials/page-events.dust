@@ -8,19 +8,19 @@
         <!-- Tabs -->
         <div class="gt-event-list-tabs-container">
             {#Query}
-                <div id='{params.tab_name}' class="gt-event-list-tabs {@contains key=params.tab_name value="all_events"} active {/contains}">{params.tab_title}</div>
+                <div id='{params.tab_name}' class="gt-event-list-tabs {@contains key=params.tab_name value="all-events"} active {/contains}">{params.tab_title}</div>
             {/Query}
         </div>
 
         {#Query}
             <div class="gt-event-list-container" id="gt-event-list-container-{params.tab_name}" 
                 {! Show content only for "all events" tab !}
-                {@contains key=params.tab_name value="all_events"} style="display:block;" {:else} style="display:none;" {/contains} >
+                {@contains key=params.tab_name value="all-events"} style="display:block;" {:else} style="display:none;" {/contains} >
             
                 <div class="gt-event-list" id="gt-event-list">
                     {>"shared/event-list" /}
                 </div>
-                <a href="#" class="load-more" id="load-more" data-max-num-pages="1">Load more</a>
+                <a href="#" class="load-more" id="load-more-{params.tab_name}" data-max-num-pages="1">Load more</a>
             </div>
         {/Query}
 
